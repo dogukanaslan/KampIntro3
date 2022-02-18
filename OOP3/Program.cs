@@ -25,3 +25,5 @@ namespace OOP3
 }
 
 //İnterfaceler de o interface i implemente eden classı tutabilir.
+//Classların tek başına bir anlamı vardır ama interfacelerin tek başına bir anlamı yoktur bu yüzden interfaceler newlenemez.
+//Abstract sınıflar kullanacaksak interface yerine inheritance kullanılır.

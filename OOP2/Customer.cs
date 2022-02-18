@@ -10,3 +10,4 @@ namespace OOP2
         public string CustomnerNumber { get; set; }
     }
 }
+//Classı sadece 1 class ile implemente edebilirsin.
