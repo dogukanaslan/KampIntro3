@@ -6,22 +6,22 @@
 
 ----case insensitive
 
-select * from Products where CategoryID = 1 or CategoryID = 3
+--select * from Products where CategoryID = 1 or CategoryID = 3
 
-select * from Products where CategoryID = 1 and UnitPrice<=10
+--select * from Products where CategoryID = 1 and UnitPrice<=10
 
-select * from Products order by CategoryID,ProductName
+--select * from Products order by CategoryID,ProductName
 
-select * from Products where CategoryID = 1 order by UnitPrice desc
+--select * from Products where CategoryID = 1 order by UnitPrice desc
 
-select count(*) Adet from Products where CategoryID = 8
+--select count(*) Adet from Products where CategoryID = 8
 
-select categoryID,count(*) from Products group by CategoryID
+--select categoryID,count(*) from Products group by CategoryID
 
-select categoryID,count(*) from Products where UnitPrice>20 group by CategoryID having count(*)<10 
+--select categoryID,count(*) from Products where UnitPrice>20 group by CategoryID having count(*)<10 
 
-select Products.ProductID, Products.ProductName, Products.UnitPrice, Categories.CategoryName 
-from Products inner join Categories on Products.CategoryID = Categories.CategoryID where Products.UnitPrice>10
+--select Products.ProductID, Products.ProductName, Products.UnitPrice, Categories.CategoryName 
+--from Products inner join Categories on Products.CategoryID = Categories.CategoryID where Products.UnitPrice>10
 
 select * from Customers c left join Orders o on c.CustomerID = o.CustomerID where o.CustomerID is null
 --Buradaki sonuç 832 tane müşteriden 2 tanesi hiç sipariş vermemiş.
