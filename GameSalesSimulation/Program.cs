@@ -13,6 +13,8 @@ namespace GameSalesSimulation
             Gamer gamer = new Gamer();
             gamer.FirstName = "Doğukan";
             gamer.LastName = "Aslan";
+            gamer.BirthYear = 2003;
+            gamer.NationalityId = "22718251468";
 
             Order order = new Order();
             order.OrderId = 13233;
@@ -26,12 +28,13 @@ namespace GameSalesSimulation
             campaign.CampaignName = "Yeni Yıl İndirimi";
 
             GameManager gameManager = new GameManager();
-            GamerManager gamerManager = new GamerManager();
+            GamerManager gamerManager = new GamerManager(new UserValidationManager());
             OrderManager orderManager = new OrderManager();
             gamerManager.Add(gamer);
             orderManager.Add(order, game1, gamer, campaign);
             gameManager.GetAllGames(game1);
             gameManager.GetAllGames(game2);
+            
         }
     }
 }

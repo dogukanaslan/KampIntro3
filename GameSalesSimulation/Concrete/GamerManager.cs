@@ -8,9 +8,23 @@ namespace GameSalesSimulation.Concrete
 {
     class GamerManager : IGamerService
     {
+        IUserValidationService _userValidationService;
+
+        public GamerManager(IUserValidationService userValidationService)
+        {
+            _userValidationService = userValidationService;
+        }
+
         public void Add(Gamer gamer)
         {
-            Console.WriteLine("Müşteri Eklendi. : " + gamer.FirstName + " " + gamer.LastName);
+            if (_userValidationService.Validate(gamer) == true)
+            {
+                Console.WriteLine("Müşteri Eklendi. : " + gamer.FirstName + " " + gamer.LastName);
+            }
+            else
+            {
+                Console.WriteLine("Doğrulama ve kayıt başarısız.");
+            }
         }
 
         public void Delete(Gamer gamer)
