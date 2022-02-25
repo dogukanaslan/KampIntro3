@@ -23,11 +23,14 @@ namespace LinqProject
                 new Product{ProductId=5, CategoryId = 1, ProductName = "Monster", QuantityPerUnit = "RTX 3050Tİ Ekran Kartı", UnitPrice = 8000, UnitsInStock = 12}
             };
 
-            var result = products.Where(p => p.UnitPrice > 5000);
-            foreach (var product in result)
-            {
-                Console.WriteLine(product.ProductName);
-            }
+            //var result = products.Where(p => p.UnitPrice > 5000);
+            //foreach (var product in result)
+            //{
+            //    Console.WriteLine(product.ProductName);
+            //}
+
+           var result = products.Any(p => p.ProductName == "Acer");
+            Console.WriteLine(result);
         } 
     }
     class Product
